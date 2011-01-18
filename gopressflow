@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/bin/bashA
+# Upgrades/Installs Pressflow over your Drupal installation
+# * please backup your files before doing anything!
+#
 curl -C - -O http://files.pressflow.org/pressflow-6-current.tar.gz
 tar -zxvf pressflow-6-current.tar.gz
 rm pressflow*.tar.gz
