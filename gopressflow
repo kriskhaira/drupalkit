@@ -5,7 +5,7 @@ rm pressflow*.tar.gz
 mv pressflow* pressflow
 mv pressflow/*.txt ./
 mv pressflow/*.php ./
-mv pressflow/*.htaccess ./
+mv pressflow/.htaccess ./
 rsync -avzpP --delete pressflow/includes ./
 rsync -avzpP --delete pressflow/misc ./
 rsync -avzpP --delete pressflow/modules ./
