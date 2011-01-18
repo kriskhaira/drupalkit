@@ -1,6 +1,6 @@
 #!/bin/bash
 curl -C - -O http://files.pressflow.org/pressflow-6-current.tar.gz
-tar xzvf http://files.pressflow.org/pressflow-6-current.tar.gz
+tar -zxvf pressflow-6-current.tar.gz
 rm pressflow*.tar.gz
 mv pressflow* pressflow
 mv pressflow/*.txt ./
