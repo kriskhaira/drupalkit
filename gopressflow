@@ -1,0 +1,16 @@
+#!/bin/bash
+curl -C - -O http://files.pressflow.org/pressflow-6-current.tar.gz
+tar xzvf http://files.pressflow.org/pressflow-6-current.tar.gz
+rm pressflow*.tar.gz
+mv pressflow* pressflow
+mv pressflow/*.txt ./
+mv pressflow/*.php ./
+mv pressflow/*.htaccess ./
+rsync -avzpP --delete pressflow/includes ./
+rsync -avzpP --delete pressflow/misc ./
+rsync -avzpP --delete pressflow/modules ./
+rsync -avzpP --delete pressflow/profiles ./
+rsync -avzpP --delete pressflow/scripts ./
+rsync -avzpP pressflow/sites ./
+rsync -avzpP --delete pressflow/themes ./
+rm -r pressflow
