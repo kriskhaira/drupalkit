@@ -1,4 +1,4 @@
-#!/bin/bashA
+#!/bin/bash
 # Upgrades/Installs Pressflow over your Drupal installation
 # * please backup your files before doing anything!
 #
