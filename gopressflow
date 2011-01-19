@@ -17,3 +17,4 @@ rsync -avzpP --delete pressflow/scripts ./
 rsync -avzpP pressflow/sites ./
 rsync -avzpP --delete pressflow/themes ./
 rm -r pressflow
+drush cache-clear all
