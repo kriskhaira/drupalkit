@@ -1,0 +1,3 @@
+#!/bin/bash
+# SECURITY
+chmod 644 sites/default/settings.php

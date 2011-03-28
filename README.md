@@ -2,7 +2,14 @@ A compilation of different drush make files, as well as a script to replace a Dr
 
 I got some of the makefiles from various Github repos. Credit goes to original authors!
 
-## Sample run for Drupal 6 installations
+## Sample setup for Drupal 7
+
+    drush make ~/.dev/drupalkit/d7/kr.make dev
+    ~/.dev/drupalkit/d7/preinstall
+    <run the installation in your browser>
+    ~/.dev/drupalkit/d7/postinstall
+
+## Sample setup for Drupal 6
 
     drush make ~/.dev/drupalkit/d6/kr.make dev
     ~/.dev/drupalkit/d6/preinstall
@@ -12,7 +19,3 @@ I got some of the makefiles from various Github repos. Credit goes to original a
 
 The last line replaces your Drupal core with Pressflow, but does not touch non-core files including modules alone. There was a message from one of the Pressflow core maintainers that this is far from the best way to rpelace your D6 installation with Pressflow or to keep it updated, so you might want to give his suggestion a try. More in this link:
 https://answers.launchpad.net/pressflow/+question/113978
-    
-## Sample run for Drupal 7 installation
-
-    drush make ~/.dev/drupalkit/d7/kr.make dev
