@@ -1,4 +1,4 @@
-## DrupalKit
+# DrupalKit
 
 A compilation of different drush make files, as well as a script to replace a Drupal 6 installation with Pressflow 6.
 
