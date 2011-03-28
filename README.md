@@ -1,6 +1,6 @@
-A compilation of different drush make files, as well as a script to replace a Drupal 6 installation with Pressflow 6.
+## DrupalKit
 
-I got some of the makefiles from various Github repos. Credit goes to original authors!
+A compilation of different drush make files, as well as a script to replace a Drupal 6 installation with Pressflow 6.
 
 ## Sample setup for Drupal 7
 
