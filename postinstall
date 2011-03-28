@@ -1,0 +1,104 @@
+# CORE SECURITY
+chmod 644 sites/default/settings.php
+
+# FILES & CACHE DIRECTORY
+mkdir sites/default/files/cache
+chmod 777 sites/default/files/cache
+mkdir sites/default/files/color
+chmod 777 sites/default/files/color
+mkdir sites/default/files/css
+chmod 777 sites/default/files/css
+mkdir sites/default/files/js
+chmod 777 sites/default/files/js
+mkdir sites/default/files/ctools
+chmod 777 sites/default/files/ctools
+mkdir sites/default/files/imagecache
+chmod 777 sites/default/files/imagecache
+chmod 777 sites/default/files/field_*
+chmod 777 sites/default/files/imagefield_*
+mkdir sites/default/files/ctools/css
+chmod 777 sites/default/files/ctools/css
+mkdir cache
+chmod 777 cache
+
+# CORE OPTIMIZATIONS TO SETTINGS.PHP
+echo "Put the following in settings.php and then continue"
+echo ""
+echo "ini_set('max_execution_time', 90);"
+echo "ini_set('memory_limit', '256M');"
+echo ""
+read -p "Continue? (y/n): " -n 1
+echo ""
+if [[ $REPLY =~ ^[Nn]$ ]]
+then
+  exit 1
+fi
+
+# CORE MODULES
+drush dis -y update
+drush en -y contact path search profile
+
+# ADMIN HELPERS
+drush en -y admin_menu
+drush en -y advanced_help
+drush en -y devel*
+drush en -y taxonomy_manager
+drush en -y views*
+drush en -y adminrole
+drush en -y rules*
+drush en -y libraries*
+drush en -y preview*
+drush en -y node_clone*
+
+# USER HELPERS
+drush en -y simplemenu*
+drush en -y logintoboggan*
+drush en -y login_destination
+
+# WORKFLOW
+drush en -y ctools* bulk_export page_manager stylizer
+drush en -y features
+drush en -y strongarm
+drush en -y exportables
+drush en -y input_formats
+drush en -y fe*
+drush en -y node_export*
+
+# WYSIWYG
+drush en -y wysiwyg
+drush en -y imce
+drush en -y imce_wysiwyg
+drush en -y cufon
+rm -rf "sites/all/libraries/tinymce/examples"
+;rm -rf "sites/all/libraries/ckeditor/_samples"
+;rm -rf "sites/all/libraries/ckeditor/_source"
+
+# CCK
+drush en -y content* fieldgroup filefield imagefield nodereference number optionwidgets text userreference
+drush dis -y content_permissions
+drush en -y panels*
+drush en -y imageapi*
+drush en -y imagecache*
+drush en -y imagefield
+drush en -y token*
+drush en -y pathauto
+drush en -y flag*
+drush en -y jquery_ui
+drush en -y date*; drush dis -y date_php4;
+drush en -y menu_block
+drush en -y menu_trail_by_path
+drush en -y taxonomy_menu*
+rm -rf "sites/all/modules/jquery_ui/jquery.ui/demos"
+rm -rf "sites/all/modules/jquery_ui/jquery.ui/tests"
+
+# SEARCH
+drush en -y field_indexer cck_field_indexer node_field_indexer
+
+# THEMES
+mkdir "sites/all/themes"
+
+# REMINDERS
+echo ""
+echo "Remember to commit this to Git."
+echo "And don't forget to set your cronjobs"
+echo ""
