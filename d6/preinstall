@@ -1,4 +1,4 @@
-# CORE
+#!/bin/bash
 cp sites/default/default.settings.php sites/default/settings.php
 chmod 777 sites/default/settings.php
 mkdir sites/default/files
