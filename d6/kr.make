@@ -11,7 +11,7 @@ projects[] = drupal
 ; projects[pressflow][download][type] = "get"
 ; projects[pressflow][download][url] = "http://files.pressflow.org/pressflow-6-current.tar.gz"
 
-; ADMIN HELPERS
+; ESSENTIAL
 projects[admin_menu][subdir] = "contrib"
 projects[advanced_help][subdir] = "contrib"
 projects[devel][subdir] = "contrib"
@@ -25,8 +25,8 @@ projects[rules][subdir] = "contrib"
 projects[libraries][subdir] = "contrib"
 projects[preview][subdir] = "contrib"
 projects[node_clone][subdir] = "contrib"
-
-; SITE MANAGER HELPERS
+projects[backup_migrate][subdir] = "contrib"
+projects[backup_migrate][version] = "2.x-dev"
 projects[simplemenu][subdir] = "contrib"
 projects[logintoboggan][subdir] = "contrib"
 projects[login_destination][subdir] = "contrib"
