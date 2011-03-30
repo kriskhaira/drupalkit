@@ -37,7 +37,7 @@ fi
 
 # CORE MODULES
 drush dis -y update
-drush en -y contact path search profile
+drush en -y path search profile
 
 # ADMIN HELPERS
 drush en -y admin_menu
