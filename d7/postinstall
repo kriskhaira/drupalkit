@@ -2,5 +2,53 @@
 # SECURITY
 chmod 644 sites/default/settings.php
 
+# MAKE SURE SUBFOLDERS in FILES/ ARE WRITABLE
+# ------------------------------------------------------------------------------------------------ #
+mkdir sites/default/files/cache
+chmod 777 sites/default/files/cache
+mkdir sites/default/files/color
+chmod 777 sites/default/files/color
+mkdir sites/default/files/css
+chmod 777 sites/default/files/css
+mkdir sites/default/files/js
+chmod 777 sites/default/files/js
+mkdir sites/default/files/ctools
+chmod 777 sites/default/files/ctools
+mkdir sites/default/files/imagecache
+chmod 777 sites/default/files/imagecache
+chmod 777 sites/default/files/field_*
+chmod 777 sites/default/files/imagefield_*
+mkdir sites/default/files/ctools/css
+chmod 777 sites/default/files/ctools/css
+mkdir sites/default/files/styles
+chmod 777 sites/default/files/styles
+mkdir sites/default/files/pictures
+chmod 777 sites/default/files/pictures
+mkdir sites/default/files/default_images
+chmod 777 sites/default/files/default_images
+mkdir cache
+chmod 777 cache
+
 # DISABLE SOME CORE MODULES
+# ------------------------------------------------------------------------------------------------ #
 drush dis –y dashboard, dblog, update
+
+# ADMIN
+# ------------------------------------------------------------------------------------------------ #
+drush en -y devel, devel_generate
+
+# SITE BUILDING
+# ------------------------------------------------------------------------------------------------ #
+drush en -y ctools*
+drush dis -y ctools_plugin_example, advanced_help
+drush en -y views*
+drush en -y panels*
+
+# ESSENTIAL
+# ------------------------------------------------------------------------------------------------ #
+
+
+# CKEDITOR
+# ------------------------------------------------------------------------------------------------ #
+drush en -y ckeditor*
+drush en -y imce*

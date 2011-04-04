@@ -66,9 +66,8 @@ drush en -y fe*
 drush en -y node_export*
 
 # WYSIWYG
-drush en -y wysiwyg
 drush en -y imce
-drush en -y imce_wysiwyg
+drush en -y ckeditor
 drush en -y cufon
 rm -rf "sites/all/libraries/tinymce/examples"
 ;rm -rf "sites/all/libraries/ckeditor/_samples"
