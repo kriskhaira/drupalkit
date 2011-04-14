@@ -7,7 +7,7 @@ projects[drupal][type] = "core"
 ; --------------------------------------------------------------------------------------------------
 projects[backup_migrate][subdir] = "contrib"
 projects[backup_migrate][version] = "2.x-dev"
-projects[devel][subdir] = "contrib"
+projects[admin_menu][subdir] = "contrib"
 
 ; SITE BUILDING
 ; --------------------------------------------------------------------------------------------------
@@ -23,10 +23,10 @@ projects[] = "zen"
 ; --------------------------------------------------------------------------------------------------
 ; CKEDITOR
 projects[ckeditor][subdir] = "contrib"
-libraries[tinymce][download][type]= "get"
-libraries[tinymce][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.5.2/ckeditor_3.5.2.tar.gz"
-libraries[tinymce][directory_name] = "ckeditor"
-libraries[tinymce][destination] = "libraries"
+libraries[ckeditor][download][type]= "get"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.5.2/ckeditor_3.5.2.tar.gz"
+libraries[ckeditor][directory_name] = "ckeditor"
+libraries[ckeditor][destination] = "libraries"
 
 ; TINYMCE
 ;projects[wysiwyg][subdir] = "contrib"

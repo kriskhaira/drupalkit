@@ -26,7 +26,11 @@ chmod 777 cache
 echo "Put the following in settings.php and then continue"
 echo ""
 echo "ini_set('max_execution_time', 90);"
-echo "ini_set('memory_limit', '256M');"
+echo "ini_set('memory_limit', '96M');"
+echo "ini_set('max_input_nesting_level', 64);"
+echo "ini_set('max_execution_time', 90);"
+echo "ini_set('post_max_size', '64M');"
+echo "ini_set('upload_max_filesize', '64M');"
 echo ""
 read -p "Continue? (y/n): " -n 1
 echo ""
