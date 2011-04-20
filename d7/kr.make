@@ -14,6 +14,8 @@ projects[admin_menu][subdir] = "contrib"
 projects[ctools][subdir] = "contrib"
 projects[views][subdir] = "contrib"
 projects[panels][subdir] = "contrib"
+projects[features][subdir] = "contrib"
+projects[jquery_plugin][subdir] = "contrib"
 
 ; ZEN
 ; --------------------------------------------------------------------------------------------------
