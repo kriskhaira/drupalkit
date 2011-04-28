@@ -27,7 +27,8 @@ fi
 # DISABLE SOME CORE MODULES
 # ------------------------------------------------------------------------------------------------ #
 drush dis –y dashboard, dblog, update # for performance reasons
-drush dis –y overlay # for not compatible with videos at the moment
+drush dis –y overlay # not compatible with Flash videos at the moment
+drush dis -y contextual # Contextual Links is annoying
 
 # ADMIN
 # ------------------------------------------------------------------------------------------------ #
@@ -40,7 +41,7 @@ drush en -y ctools*
 drush dis -y ctools_ajax_sample, ctools_plugin_example, advanced_help
 drush en -y views*
 drush en -y panels*
-drush en -y features*
+drush en -y features
 
 # ESSENTIAL
 # ------------------------------------------------------------------------------------------------ #
