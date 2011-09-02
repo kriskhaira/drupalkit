@@ -1,3 +1,7 @@
+; This is a makefile
+; HOW TO USE IT
+; drush make ~/.dev/drupalkit/d7/kr.make
+
 core = 7.x
 api = 2
 
