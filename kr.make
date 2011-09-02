@@ -12,12 +12,12 @@ projects[drupal][type] = "core"
 projects[backup_migrate][subdir] = "contrib"
 projects[admin_menu][subdir] = "contrib"
 
-; ESSENTIAL SITE BUILDING
+; ESSENTIAL DEVELOPMENT MODULES
 ; --------------------------------------------------------------------------------------------------
+projects[libraries][subdir] = "contrib"
 projects[ctools][subdir] = "contrib"
 projects[views][subdir] = "contrib"
 projects[panels][subdir] = "contrib"
-projects[features][subdir] = "contrib"
 projects[jquery_plugin][subdir] = "contrib"
 
 ; THEME

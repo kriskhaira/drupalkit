@@ -34,8 +34,9 @@ drush dis -y contextual # Contextual Links is annoying
 # ------------------------------------------------------------------------------------------------ #
 drush en -y admin_menu admin_menu_toolbar
 
-# SITE BUILDING
+# ESSENTIAL DEVELOPMENT MODULES
 # ------------------------------------------------------------------------------------------------ #
+drush en -y libraries
 drush en -y ctools
 drush dis -y ctools_ajax_sample, ctools_plugin_example, advanced_help
 drush en -y views
