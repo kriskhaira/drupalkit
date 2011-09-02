@@ -4,14 +4,16 @@ A compilation of different drush make files, as well as a script to replace a Dr
 
 ## Sample setup for Drupal 7
 
-    drush make ~/.dev/drupalkit/d7/kr.make dev
-    ~/.dev/drupalkit/d7/preinstall
-    <run the installation in your browser>
-    ~/.dev/drupalkit/d7/postinstall
+    drush make ~/.dev/drupalkit/kr.make dev
+    cd dev
+    ~/.dev/drupalkit/preinstall
+    <run the GUI installer in your browser>
+    ~/.dev/drupalkit/postinstall
 
 ## Sample setup for Drupal 6
 
     drush make ~/.dev/drupalkit/d6/kr.make dev
+    cd dev
     ~/.dev/drupalkit/d6/preinstall
     <install your app in your browser>
     ~/.dev/drupalkit/d6/postinstall

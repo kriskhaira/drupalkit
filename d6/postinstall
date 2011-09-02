@@ -1,28 +1,14 @@
 #!/bin/bash
-# CORE SECURITY
+
+
+# Secure settings.php
+# ------------------------------------------------------------------------------------------------ #
+
 chmod 644 sites/default/settings.php
 
-# FILES & CACHE DIRECTORY
-mkdir sites/default/files/cache
-chmod 777 sites/default/files/cache
-mkdir sites/default/files/color
-chmod 777 sites/default/files/color
-mkdir sites/default/files/css
-chmod 777 sites/default/files/css
-mkdir sites/default/files/js
-chmod 777 sites/default/files/js
-mkdir sites/default/files/ctools
-chmod 777 sites/default/files/ctools
-mkdir sites/default/files/imagecache
-chmod 777 sites/default/files/imagecache
-chmod 777 sites/default/files/field_*
-chmod 777 sites/default/files/imagefield_*
-mkdir sites/default/files/ctools/css
-chmod 777 sites/default/files/ctools/css
-mkdir cache
-chmod 777 cache
+# Optimize settings.php
+# ------------------------------------------------------------------------------------------------ #
 
-# CORE OPTIMIZATIONS TO SETTINGS.PHP
 echo "Put the following in settings.php and then continue"
 echo ""
 echo "ini_set('max_execution_time', 90);"

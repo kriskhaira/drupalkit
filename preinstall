@@ -1,5 +1,15 @@
 #!/bin/bash
-mkdir sites/default/files
+
+# Set up settings.php
+# ------------------------------------------------------------------------------------------------ #
 cp sites/default/default.settings.php sites/default/settings.php
-chmod 777 sites/default/files
 chmod 777 sites/default/settings.php
+
+# Set up files and cache folders
+# ------------------------------------------------------------------------------------------------ #
+
+mkdir sites/default/files
+mkdir sites/default/files/css
+mkdir sites/default/files/js
+mkdir sites/default/files/ctools
+find `drush dd %files` -type d -exec chmod 777 {} \;

@@ -1,20 +1,20 @@
 #!/bin/bash
-# SECURITY
+
+# SECURE SETTINGS.PHP
+# ------------------------------------------------------------------------------------------------ #
+
 chmod 644 sites/default/settings.php
 
-# CHMOD 777 FILES FOLDER AND ALL OF ITS SUBFOLDERS
-# ------------------------------------------------------------------------------------------------ #
-find `drush dd %files` -type d -exec chmod 777 {} \;
 
 # OPTIMIZATIONS
 # ------------------------------------------------------------------------------------------------ #
 echo "Put the following in settings.php and then continue"
 echo ""
 echo "ini_set('max_execution_time', 90);"
-echo "ini_set('memory_limit', '96M');"
+echo "ini_set('memory_limit', '128M');"
 echo "ini_set('max_input_nesting_level', 64);"
 echo "ini_set('max_execution_time', 90);"
-echo "ini_set('post_max_size', '64M');"
+echo "ini_set('post_max_size', '128M');"
 echo "ini_set('upload_max_filesize', '64M');"
 echo ""
 read -p "Continue? (y/n): " -n 1
@@ -32,25 +32,18 @@ drush dis -y contextual # Contextual Links is annoying
 
 # ADMIN
 # ------------------------------------------------------------------------------------------------ #
-drush en -y devel, devel_generate
-drush en -y admin*
+drush en -y admin_menu admin_menu_toolbar
 
 # SITE BUILDING
 # ------------------------------------------------------------------------------------------------ #
-drush en -y ctools*
+drush en -y ctools
 drush dis -y ctools_ajax_sample, ctools_plugin_example, advanced_help
-drush en -y views*
-drush en -y panels*
-drush en -y features
+drush en -y views
+drush en -y panels
 
-# ESSENTIAL
+# CONTENT MANAGEMENT
 # ------------------------------------------------------------------------------------------------ #
-
-
-# CKEDITOR
-# ------------------------------------------------------------------------------------------------ #
-drush en -y ckeditor*
-drush en -y imce*
+drush en -y imce imce_wysiwyg wysiwyg
 
 # THEMING
 # ------------------------------------------------------------------------------------------------ #
