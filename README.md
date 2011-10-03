@@ -24,11 +24,11 @@ https://answers.launchpad.net/pressflow/+question/113978
 
 ## bin tools
 
-There are also some really useful bin tools for managing Drupal modules. Add the following path to the start of your .profile:
+There are also some really useful bin tools for quickly looking through modules. If you use a lot of modules, this will save you a lot of time. Add the following path to the start of your .profile:
 
     export PATH=~/.dev/drupalkit/bin:$PATH
 
 Now use the tools like this:
 
     finder views
-    readme views
+    read views
