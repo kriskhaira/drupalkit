@@ -1,0 +1,2 @@
+#!/bin/bash
+mate sites/all/modules/$1/README.txt
