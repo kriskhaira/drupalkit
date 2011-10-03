@@ -12,10 +12,10 @@ chmod 644 sites/default/settings.php
 echo "Put the following in settings.php and then continue"
 echo ""
 echo "ini_set('max_execution_time', 90);"
-echo "ini_set('memory_limit', '96M');"
+echo "ini_set('memory_limit', '128M');"
 echo "ini_set('max_input_nesting_level', 64);"
 echo "ini_set('max_execution_time', 90);"
-echo "ini_set('post_max_size', '64M');"
+echo "ini_set('post_max_size', '128M');"
 echo "ini_set('upload_max_filesize', '64M');"
 echo ""
 read -p "Continue? (y/n): " -n 1
@@ -38,13 +38,7 @@ drush en -y views*
 drush en -y adminrole
 drush en -y rules*
 drush en -y libraries*
-drush en -y preview*
 drush en -y node_clone*
-
-# USER HELPERS
-drush en -y simplemenu*
-drush en -y logintoboggan*
-drush en -y login_destination
 
 # WORKFLOW
 drush en -y ctools* bulk_export page_manager stylizer
@@ -57,11 +51,9 @@ drush en -y node_export*
 
 # WYSIWYG
 drush en -y imce
-drush en -y ckeditor
-drush en -y cufon
-rm -rf "sites/all/libraries/tinymce/examples"
-;rm -rf "sites/all/libraries/ckeditor/_samples"
-;rm -rf "sites/all/libraries/ckeditor/_source"
+drush en -y wysiwyg
+drush en -y google_fonts
+
 
 # CCK
 drush en -y content* fieldgroup filefield imagefield nodereference number optionwidgets text userreference
@@ -74,18 +66,24 @@ drush en -y token*
 drush en -y pathauto
 drush en -y flag*
 drush en -y jquery_ui
-drush en -y date*; drush dis -y date_php4;
-drush en -y menu_block
-drush en -y menu_trail_by_path
-drush en -y taxonomy_menu*
+drush en -y date*
+drush dis -y date_php4
 rm -rf "sites/all/modules/jquery_ui/jquery.ui/demos"
 rm -rf "sites/all/modules/jquery_ui/jquery.ui/tests"
 
 # SEARCH
 drush en -y field_indexer cck_field_indexer node_field_indexer
 
-# THEMES
+# MAKE THEME FOLDER
+# ------------------------------------------------------------------------------------------------ #
+
 mkdir "sites/all/themes"
+
+# DELETE SAMPLES IN VENDOR LIBRARIES TO SAVE SPACE
+# ------------------------------------------------------------------------------------------------ #
+rm -rf "sites/all/libraries/tinymce/examples"
+;rm -rf "sites/all/libraries/ckeditor/_samples"
+;rm -rf "sites/all/libraries/ckeditor/_source"
 
 # REMINDERS
 echo ""

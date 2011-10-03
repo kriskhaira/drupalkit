@@ -1,6 +1,5 @@
-; This is a makefile
-; HOW TO USE IT
-; drush make ~/.dev/drupalkit/d7/kr.make
+; KR STANDARD D7 MAKEFILE
+; --------------------------------------------------------------------------------------------------
 
 core = 7.x
 api = 2
@@ -14,15 +13,24 @@ projects[admin_menu][subdir] = "contrib"
 
 ; ESSENTIAL DEVELOPMENT MODULES
 ; --------------------------------------------------------------------------------------------------
-projects[libraries][subdir] = "contrib"
 projects[ctools][subdir] = "contrib"
-projects[views][subdir] = "contrib"
-projects[panels][subdir] = "contrib"
+projects[devel][subdir] = "contrib"
+projects[features][subdir] = "contrib"
+projects[strongarm][subdir] = "contrib"
+projects[node_export][subdir] = "contrib"
+projects[libraries][subdir] = "contrib"
+projects[jquery_update][subdir] = "contrib"
 projects[jquery_plugin][subdir] = "contrib"
 
-; THEME
+; ESSENTIAL SITE BUILDING MODULES
 ; --------------------------------------------------------------------------------------------------
-projects[] = "zen"
+projects[advanced_help][subdir] = "contrib"
+projects[taxonomy_manager][subdir] = "contrib"
+projects[views][subdir] = "contrib"
+projects[views_bulk_operations][subdir] = "contrib"
+projects[panels][subdir] = "contrib"
+projects[node_clone][subdir] = "contrib"
+projects[google_fonts][subdir] = "contrib"
 
 ; BASIC CONTENT MANAGEMENT STUFF
 ; --------------------------------------------------------------------------------------------------
@@ -33,3 +41,7 @@ libraries[ckeditor][download][type]= "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.1/ckeditor_3.6.1.tar.gz"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][destination] = "libraries"
+
+; THEME
+; --------------------------------------------------------------------------------------------------
+projects[] = "zen"
