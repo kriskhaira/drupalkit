@@ -31,4 +31,4 @@ There are also some really useful bin tools for quickly looking through modules.
 Now use the tools like this:
 
     finder views
-    read views
+    readme views
