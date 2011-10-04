@@ -82,8 +82,8 @@ mkdir "sites/all/themes"
 # DELETE SAMPLES IN VENDOR LIBRARIES TO SAVE SPACE
 # ------------------------------------------------------------------------------------------------ #
 rm -rf "sites/all/libraries/tinymce/examples"
-;rm -rf "sites/all/libraries/ckeditor/_samples"
-;rm -rf "sites/all/libraries/ckeditor/_source"
+rm -rf "sites/all/libraries/ckeditor/_samples"
+rm -rf "sites/all/libraries/ckeditor/_source"
 
 # REMINDERS
 echo ""
