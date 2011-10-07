@@ -15,8 +15,6 @@ projects[admin_menu][subdir] = "contrib"
 ; --------------------------------------------------------------------------------------------------
 projects[ctools][subdir] = "contrib"
 projects[devel][subdir] = "contrib"
-projects[features][subdir] = "contrib"
-projects[strongarm][subdir] = "contrib"
 projects[node_export][subdir] = "contrib"
 projects[libraries][subdir] = "contrib"
 projects[jquery_update][subdir] = "contrib"
